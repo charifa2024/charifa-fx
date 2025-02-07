@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio charifa-fax</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+
+    <style>
+        @keyframes rotateAround {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.circular-content {
+    animation: rotateAround 5s linear infinite;
+    transform-origin: center;
+}
+
+    </style>
+</head>
+<body class="overflow-x-hidden items-center font-Outfit leading-8  bg-lightTheme dark:bg-darkTheme text-darkTheme dark:text-lightTheme">
+    <div class="fixed top-0 right-0 w-full h-screen overflow-hidden -z-10 ">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-white/30"></div>
+    </div>
+    <nav class="w-full fixed px-5 lg:px-10 xl:px-[5%] py-5 flex items-center justify-between z-50 transition-all duration-300" id="navbar">
+        <img src="./charifa.png" alt="Logo" class="w-22 cursor-pointer dark:hidden">
+        <img src="./dark_logo.png" alt="Logo" class="w-22 cursor-pointer hidden dark:block">
+
+    
+        <!-- Flex container for center content (ul) -->
+        <div class="flex flex-1 justify-center " >
+            <ul class="hidden md:flex items-center gap-8 lg:gap-15 rounded-full px-10 py-2 font-Ovo text-xl font-semibold dark:border dark:border-white/50 dark:bg-transparent " id="nav-links">
+                <li><a href="#top">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </div>
+    
+        <!-- Right-aligned buttons and mobile menu icon -->
+        <div class="flex items-center font-Ovo text-xl font-semibold">
+            <button onclick="toggleTheme()" class="flex items-center gap-4 px-8 py-2.5 rounded-full  font-Ovo">
+                <img src="./moon.png" alt="moon" class="w-8 cursor-pointer dark:hidden">
+                <img src="./sun.png" alt="sun" class="w-10 cursor-pointer hidden dark:block">
+
+              </button>
+              
+    
+            <a href="#contact" class="hidden lg:flex items-center gap-4 px-8 py-2.5 border border-black rounded-full  font-Ovo dark:border-white/50">
+                Contact <img src="./right-arrow -white.png" alt="contact" class="w-8 h-8 cursor-pointer hidden dark:block">
+                <img src="./right-arrow-black.png" alt="contact" class="w-8 h-8 cursor-pointer dark:hidden">
+            </a>
+    
+            <!-- Mobile menu button (visible only on small screens) -->
+            <button class="block md:hidden ml-3" onclick="openMenu()">
+                <img src="/menub.png" alt="menu" class="w-10 dark:hidden">
+                <img src="/menuwhite.png" alt="menu" class="w-10 hidden dark:block">
+
+
+            </button>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo  dark:text-black">
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <img src="./close.png" alt="close" class="w-8 cursor-pointer">
+            </div>
+            <li><a href="#top" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About me</a></li>
+            <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+            <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact me</a></li>
+        </ul>
+    </nav>
+
+    <!-- header -->
+    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 pt-0">
+        <img src="./cat.jpeg" alt="profile" class="rounded-full w-32 h-32 mt-16">
+        <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">Hi! I'm Charifa Fax ^_^ <img src="./wave.png" alt="hand icon" class="w-6"> </h3>
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">Full Stack Developer.</h1> 
+        <p class="max-w-2xl mx-auto font-Ovo">
+            I'm a 2nd-year student at École Supérieure de Technologie Essaouira, Morocco, specializing in Génie Informatique.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 mt-4 dark:text-black">
+            <a href="#contact" class="px-10 py-3 border border-gray-400 rounded-full bg-rose-100  text-wrap flex items-center gap-2">
+                Contact me
+                <img src="./right-arrow.png" alt="arrow right" class="w-5">
+            </a>
+
+            <a href="./Profile.pdf" download class="px-10 py-3 border rounded-full  border-gray-400  text-wrap flex items-center gap-2 bg-white">
+                my resume
+                <img src="./file.png" alt="arrow right" class="w-7">
+            </a>
+        </div>
+     </div>
+<!-------------- about me -------------->
+
+<div id="about" class="w-full px-[12%] py-10 scroll-mt-25">
+    <h4  class="text-center mb-2 text-lg font-Ovo">Introduction</h4>
+    <h2 class="text-center text-5xl font-Ovo">About me</h2>
+    <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+        <div class="max-w-max mx-auto relative">
+            <img src="./user.jpeg" alt="user image" class="w-70 sm:w-64 rounded-3xl max-w-none">
+            
+            <div class="bg-gray-200 w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/4
+            shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center">
+    <div class=" absolute w-full h-full flex items-center justify-center">
+        <svg width="100%" height="100%" viewBox="0 0 200 200" class="overflow-visible circular-content">
+            <defs>
+                <path id="circlePath" d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
+            </defs>
+            <text fill="gray" font-size="19" font-family="Arial" letter-spacing="5">
+                <textPath xlink:href="#circlePath" startOffset="50%" text-anchor="middle">
+                    FULL STACK DEVELOPER
+                </textPath>
+            </text>
+        </svg>
+
+        <img src="./developer.png" alt="developer" class="w-1/3 absolute top-1/2 left-1/2 -translate-x-1/4 -translate-y-1/4 ">
+    </div>
+</div>
+
+        </div>
+        
+        
+        
+        <div class="flex-1">
+            <p class="mb-8 max-w-none font-Ovo">
+            Hi, I’m Charifa—an endlessly curious mind with a passion for problem-solving and continuous learning. I love diving into different technologies, exploring new challenges, and bringing ideas to life through code.I thrive on logic, creativity, and structured thinking, always seeking ways to improve and innovate. <br>
+           Beyond programming, I enjoy reading, crocheting, and refining my skills across various domains. Whether it’s building something new or optimizing existing systems, I find joy in the process of learning and creating.
+            </p>
+
+            <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl">
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer bg-gray-100 hover:bg-lime-50 hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0px_#000] dark:hover:shadow-[4px_4px_0px_#e8a115]">
+                    <img src="./code.png" alt="code tag" class="w-10 mt-3 ">
+                    <h3 class="my-4 font-semibold text-gray-700">Languages</h3>
+                    <p class="text-gray-600 text-sm">I work with **HTML, CSS, and JavaScript** for web development, combining them with **PHP and Laravel** to build dynamic applications. I also use **Java** for software development, including desktop applications and backend systems.</p>
+                </li>
+
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer bg-gray-100 hover:bg-lime-50 hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0px_#000]  dark:hover:shadow-[4px_4px_0px_#e8a115]">
+                    <img src="./school.png" alt="code tag" class="w-10 mt-3 ">
+                    <h3 class="my-4 font-semibold text-gray-700">Education</h3>
+                    <p class="text-gray-600 text-sm">I’m a second-year Génie Informatique student at EST Essaouira, learning software development, databases, and system architecture while applying my skills to real-world projects.</p>
+                </li>
+
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer bg-gray-100 hover:bg-lime-50 hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0px_#000]  dark:hover:shadow-[4px_4px_0px_#e8a115]">
+                    <img src="./project.png" alt="code tag" class="w-10 mt-3 ">
+                    <h3 class="my-4 font-semibold text-gray-700">Projects</h3>
+                    <p class="text-gray-600 text-sm">I build web apps, mini-games, and desktop applications, focusing on efficiency and user experience. My projects range from task management systems to interactive features that enhance organization. </p>
+                </li>
+            </ul>
+            <h4 class="my-6 text-gray-700 font-Ovo dark:text-white">Tools I use</h4>
+            <ul class="flex items-center gap-6 sm:gap-8">
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border  bg-gray-100 border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                    <img src="./social.png" alt="git" class="w-8 sm:w-10  ">
+                </li>
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border  bg-gray-100 border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                    <img src="./linux.png" alt="linux" class="w-8 sm:w-10  ">
+                </li>
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border  bg-gray-100 border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                    <img src="./vs.png" alt="vs code" class="w-8 sm:w-10  ">
+                </li>
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border  bg-gray-100 border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                    <img src="./sql-server.png" alt="sql" class="w-8 sm:w-10  ">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!---- services--->
+
+<div id="skills" class="w-full px-[12%] py-10 scroll-mt-20  ">
+    <h4  class="text-center mb-2 text-lg font-Ovo">What I have learned</h4>
+    <h2 class="text-center text-5xl font-Ovo">my skills</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">I’m a student passionate about full-stack development, constantly learning and building with a range of technologies to enhance my skills.</p>
+
+    <div class="grid grid-cols-auto  lg:grid-cols-4 gap-6 my-10">
+        <div class="border border-gray-400 bg-rose-50 rounded-lg px-8 py-12
+        hover:shadow-[4px_4px_0px_#000]  cursor-pointer  hover:bg-lime-50 hover:-translate-y-1 duration-500  dark:hover:shadow-[4px_4px_0px_#e8a115]"> 
+
+            <img src="./java.png" alt="java" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 ">
+                Java Development
+            </h3>
+            <p class="text-sm text-gray-600">I’ve used Java to develop desktop applications and mini-games, gaining experience in object-oriented programming.</p>
+        </div>
+
+        <div class="border border-gray-400 bg-rose-50 rounded-lg px-8 py-12
+        hover:shadow-[4px_4px_0px_#000]  cursor-pointer  hover:bg-lime-50 hover:-translate-y-1 duration-500  dark:hover:shadow-[4px_4px_0px_#e8a115]"> 
+
+            <img src="./web.png" alt="web" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 ">
+                Web Development
+            </h3>
+            <p class="text-sm text-gray-600">For web development, I work with HTML, CSS, JavaScript, PHP, and Laravel to create dynamic and responsive websites and applications.</p>
+        </div>
+
+        <div class="border border-gray-400 bg-rose-50 rounded-lg px-8 py-12
+        hover:shadow-[4px_4px_0px_#000]  cursor-pointer  hover:bg-lime-50 hover:-translate-y-1 duration-500  dark:hover:shadow-[4px_4px_0px_#e8a115]"> 
+
+            <img src="./database.png" alt="database" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 ">
+                Database Experience
+            </h3>
+            <p class="text-sm text-gray-600">I have hands-on experience with various databases such as PostgreSQL, MySQL, PL/SQL, and SQLite, and I’m comfortable managing data and optimizing queries.</p>
+        </div>
+
+        <div class="border border-gray-400 bg-rose-50 rounded-lg px-8 py-12
+        hover:shadow-[4px_4px_0px_#000]  cursor-pointer  hover:bg-lime-50 hover:-translate-y-1 duration-500  dark:hover:shadow-[4px_4px_0px_#e8a115]"> 
+
+            <img src="./study.png" alt="learning" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 ">
+                Current Learning
+            </h3>
+            <p class="text-sm text-gray-600">Currently, I’m expanding my knowledge by learning Docker, MongoDB, and Kotlin to enhance my full-stack development skills.</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!---- my work-->
+
+
+<div id="projects" class="w-full px-[5%] py-10 scroll-mt-20  ">
+        <h4  class="text-center mb-2 text-lg font-Ovo">My  portfolio</h4>
+        <h2 class="text-center text-5xl font-Ovo">My work</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">Welcome to my development portfolio! Here you’ll find a glimpse into my journey with full-stack development, showcasing my work.</p>
+
+        <div class="grid grid-cols-auto lg:grid-cols-auto gap-5">
+
+            <div class="aspect-square bg-[url('./personnel.jpeg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group w-auto ">
+                <div class="bg-gray-100 w-10/12 rounded-md absolute bottom-2 left-1/2 -translate-x-1/4 py-2 px-5 flex items-center justify-between duration-500 group-hover:bottom-8">
+
+                    <div>
+                        <h2 class="text-black font-semibold">
+                            Personal Projects
+                        </h2>
+                        <p class="text-sm text-gray-700">
+                            While I haven’t worked on large-scale projects yet, I have built several small-scale applications to solidify my skills in full-stack development.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="aspect-square bg-[url('./webdev.jpeg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group w-auto">
+                <div class="bg-gray-100 w-10/12 rounded-md absolute bottom-2 left-1/2 -translate-x-1/4 py-2 px-5 flex items-center justify-between duration-500 group-hover:bottom-8">
+
+                    <div>
+                        <h2 class="text-black font-semibold">
+                            Web Development
+                        </h2>
+                        <p class="text-sm text-gray-700">
+                            These projects include basic websites and web applications using HTML, CSS, JavaScript, PHP, and Laravel.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="aspect-square bg-[url('./javaP.jpeg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group w-auto">
+                <div class="bg-gray-100 w-10/12 rounded-md absolute bottom-2 left-1/2 -translate-x-1/4 py-2 px-5 flex items-center justify-between duration-500 group-hover:bottom-8">
+
+                    <div>
+                        <h2 class="text-black font-semibold">
+                            Java Projects
+                        </h2>
+                        <p class="text-sm text-gray-700">
+                            I’ve also developed mini-games and desktop applications using Java, which helped me improve my programming skills.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="aspect-square bg-[url('./learn.jpeg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group w-auto">
+                <div class="bg-gray-100 w-10/12 rounded-md absolute bottom-2 left-1/2 -translate-x-1/4 py-2 px-5 flex items-center justify-between duration-500 group-hover:bottom-8">
+
+                    <div>
+                        <h2 class="text-black font-semibold">
+                            Continuous Learning
+                        </h2>
+                        <p class="text-sm text-gray-700">
+                            I am constantly expanding my knowledge through personal projects, tutorials, and open-source contributions to apply what I’m learning and improve my abilities.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+</div>
+
+
+<!-----  contact-->
+<div id="contact" class="w-full px-4 md:px-[12%] py-10 scroll-mt-20 relative min-h-screen text-black">
+
+    <div class="relative z-10 bg-lime-50 dark:bg-rose-50 p-10 rounded-lg shadow-lg">
+        <h4 class="text-center mb-2 text-lg font-Ovo">Connect with me</h4>
+        <h2 class="text-center text-5xl font-Ovo">Drop Me a Line</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">I'd love to hear from you! If you have any questions, suggestions, or advice, feel free to reach out. Use the form below to get in touch—your input is always appreciated!</p>
+        
+
+    <form action="https://api.web3forms.com/submit" method="POST" class="max-w-2xl mx-auto">
+        <input type="hidden" name="access_key" value="3e8725ec-8e91-4a00-a050-796aa4676c77">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 mb-8">
+            <input type="text" 
+                   placeholder="Enter your name" 
+                   class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+                   name="name" required
+            >
+            <input type="email" 
+                   placeholder="Enter your email" 
+                   class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+                   name="email" required
+            >
+        </div>
+    
+        <textarea 
+            cols="30" 
+            rows="10" 
+            placeholder="Enter your message" 
+            class="w-full p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6"
+            name="message" required
+        ></textarea>
+    
+        <button class="py-3 px-6 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black">
+            Submit now
+            <img src="./check.png" alt="send" class="w-6">
+        </button>
+    </form>
+    </div>
+    
+</div>
+
+
+<!----- footer-->
+<div class="mt-20">
+
+    <div class="text-center">
+        <img src="./charifa.png" alt="logo" class="w-36 mx-auto mb-2 dark:hidden" >
+        <img src="./dark_logo.png" alt="logo" class="w-36 mx-auto mb-2 hidden dark:block" >
+
+        <div class="w-max flex items-center gap-3 mx-auto">
+            <img src="./mailgray.png" alt="mail" class="w-6 dark:hidden">
+            <img src="./mailwhilte.png" alt="mail" class="w-6 hidden dark:block">
+
+            fxcharifa@gmail.com
+        </div>
+    </div>
+
+    <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+        <p>
+            © 2025 Charifa Fax. All Rights Reserved.
+        </p>
+        <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+            <li>
+                <a href="https://github.com/charifa2024">GitHub</a>
+            </li>
+
+            <li>
+                <a href="https://www.linkedin.com/in/charifa-fax/">Linkedin</a>
+            </li>
+
+            <li>
+                <a href="https://www.instagram.com/rei_giyuu/">Instagram</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="text-center mt-4 mb-4 text-sm">
+        <p>
+            Icons made by <a href="https://www.flaticon.com/authors/freepik" target="_blank" class="text-blue-600">Freepik</a> from <a href="https://www.flaticon.com/" target="_blank" class="text-blue-600">Flaticon</a>. <br>
+            Logo created with <a href="https://brandkit.com" target="_blank" class="text-blue-600">Brand Kit</a>. <br>
+            Images sourced from <a href="https://www.pinterest.com" target="_blank" class="text-blue-600">Pinterest</a> <br>
+            Contact form powered by <a href="https://web3forms.com/" target="_blank" class="text-blue-600">Web3 Forms</a>.
+        </p>
+    </div>
+
+</div>
+
+
+<script src="./script.js"></script>
+<script>
+   tailwind.config = {
+  theme: {
+    extend: {
+      gridTemplateColumns: {
+        'auto': 'repeat(auto-fit, minmax(250px, 1fr))',
+      },
+      fontFamily: {
+        Outfit: ['Outfit', 'sans-serif'],
+        Ovo: ['Ovo', 'serif'],
+      },
+      colors: {
+        darkTheme: '#11001F',
+        lightTheme: '#F4F4F4',
+      }
+    },
+  },
+  darkMode: 'class', // Ensure this is 'class' to use the 'dark' class for dark mode
+};
+
+</script>
+</body>
+</html>
